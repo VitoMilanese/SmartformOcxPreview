@@ -251,7 +251,7 @@
                         HorizontalAlignment="Right">
                 <Button Content="front"
                         Click="Front_Click" />
-                <Button Content="retro"
+                <Button Content="back"
                         Click="Retro_Click" />
             </StackPanel>
         </Grid>
