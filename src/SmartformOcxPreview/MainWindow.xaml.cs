@@ -184,7 +184,11 @@ namespace SmartformOcxPreview
 
                 SetFields();
 
-                AxSF.PreviewLayout(0, (short)(Zoom * 1.5));
+                if (StartupArgs == null || !short.TryParse(StartupArgs.Length > 29 ? StartupArgs[29] : "0", out var pageNumber))
+                {
+                    pageNumber = 0;
+                }
+                AxSF.PreviewLayout(pageNumber, (short)(Zoom * 1.5));
 
                 HostRoot.BorderThickness = new Thickness(1, 1, 1, 1);
                 HostRoot.Width = Math.Max(AxSF.Width + HostRoot.BorderThickness.Left, 420);
@@ -314,10 +318,10 @@ namespace SmartformOcxPreview
             }
             try
             {
-                short.TryParse((StartupArgs.Length > 29 ? StartupArgs[29] : "1"), out var printingType);
-                short.TryParse((StartupArgs.Length > 30? StartupArgs[30] : "0"), out var pageSelect);
+                short.TryParse(StartupArgs.Length > 30 ? StartupArgs[30] : "1", out var printingType);
+                short.TryParse(StartupArgs.Length > 31 ? StartupArgs[31] : "0", out var pageSelect);
 
-                AxSF.SetPrinter(StartupArgs![31]);
+                AxSF.SetPrinter(StartupArgs![32]);
                 LogHelper.LogDebug("Printing layout");
                 var printOk = AxSF.PrintLayout(printingType, pageSelect, 100);
                 LogHelper.LogDebug($"Print result: {printOk}");

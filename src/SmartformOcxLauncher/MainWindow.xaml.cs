@@ -53,9 +53,10 @@ public partial class MainWindow : Window
                 String1TextBox.Text = file[26];
                 ProfileNoteTextBox.Text = file[27];
                 RequestIdTextBox.Text = file[28];
-                PrintingTypeTextBox.Text = file[29];
-                PageSelectTextBox.Text = file[30];
-                PrinterNameComboBox.Text = file[31];
+                PageNumberTextBox.Text = file[29];
+                PrintingTypeTextBox.Text = file[30];
+                PageSelectTextBox.Text = file[31];
+                PrinterNameComboBox.Text = file[32];
 
                 try
                 {
@@ -216,6 +217,7 @@ public partial class MainWindow : Window
                 String1TextBox.Text,
                 ProfileNoteTextBox.Text,
                 RequestIdTextBox.Text,
+                PageNumberTextBox.Text,
                 PrintingTypeTextBox.Text,
                 PageSelectTextBox.Text,
                 PrinterNameComboBox.Text
