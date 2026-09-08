@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <COMReference Include="SmartForm">
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>46</VersionMajor>
+      <Guid>ec66e2f1-60a8-484d-b1b7-4916ef3af56d</Guid>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Interop.SmartFormNETDLL\Interop.SmartFormNETDLL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="SmartFormDll.dll">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

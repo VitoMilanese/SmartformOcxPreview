@@ -1,0 +1,192 @@
+<Window x:Class="SmartformOcxLauncher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Smartform OCX Preview Launcher"
+        Width="980"
+        Height="820"
+        MinWidth="760"
+        MinHeight="600"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="18">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="Smartform OCX Preview"
+                   FontSize="24"
+                   FontWeight="SemiBold"
+                   Margin="0,0,0,14" />
+
+        <ScrollViewer Grid.Row="1"
+                      VerticalScrollBarVisibility="Auto">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="24" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Sale Device" />
+                    <TextBox x:Name="SaleDeviceTextBox" />
+
+                    <TextBlock Text="Profile File Name" />
+                    <TextBox x:Name="ProfileFileNameTextBox" />
+
+                    <TextBlock Text="Profile ID" />
+                    <TextBox x:Name="ProfileIdTextBox" />
+
+                    <TextBlock Text="Profile Short Name" />
+                    <TextBox x:Name="ProfileShortNameTextBox" />
+
+                    <TextBlock Text="Profile Long Name" />
+                    <TextBox x:Name="ProfileLongNameTextBox" />
+
+                    <TextBlock Text="User ID" />
+                    <TextBox x:Name="UserIdTextBox" />
+
+                    <TextBlock Text="Holder Name" />
+                    <TextBox x:Name="HolderNameTextBox" />
+
+                    <TextBlock Text="Holder Surname" />
+                    <TextBox x:Name="HolderSurnameTextBox" />
+
+                    <TextBlock Text="Photo" />
+                    <Grid Margin="0,2,0,8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="PhotoTextBox" Margin="0" />
+                        <Button Grid.Column="1"
+                                Content="Browse..."
+                                MinWidth="90"
+                                MinHeight="30"
+                                Margin="8,0,0,0"
+                                Click="BrowsePhoto_Click" />
+                    </Grid>
+
+                    <TextBlock Text="Signature" />
+                    <Grid Margin="0,2,0,8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="SignatureTextBox" Margin="0" />
+                        <Button Grid.Column="1"
+                                Content="Browse..."
+                                MinWidth="90"
+                                MinHeight="30"
+                                Margin="8,0,0,0"
+                                Click="BrowseSignature_Click" />
+                    </Grid>
+
+                    <TextBlock Text="Birthday" />
+                    <DatePicker x:Name="BirthdayDatePicker" />
+
+                    <TextBlock Text="Issuing Date" />
+                    <DatePicker x:Name="IssuingDateDatePicker" />
+
+                    <TextBlock Text="TSC EVD" />
+                    <DatePicker x:Name="TscEvdDatePicker" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="2">
+                    <TextBlock Text="Serial Number" />
+                    <TextBox x:Name="SerialNumberTextBox" />
+
+                    <TextBlock Text="Address" />
+                    <TextBox x:Name="AddressTextBox" />
+
+                    <TextBlock Text="ZIP" />
+                    <TextBox x:Name="ZipTextBox" />
+
+                    <TextBlock Text="Town" />
+                    <TextBox x:Name="TownTextBox" />
+
+                    <TextBlock Text="Province" />
+                    <TextBox x:Name="ProvinceTextBox" />
+
+                    <TextBlock Text="STR1" />
+                    <TextBox x:Name="Str1TextBox" />
+
+                    <TextBlock Text="STR2" />
+                    <TextBox x:Name="Str2TextBox" />
+
+                    <TextBlock Text="STR3" />
+                    <TextBox x:Name="Str3TextBox" />
+
+                    <TextBlock Text="STRING1" />
+                    <TextBox x:Name="String1TextBox" />
+
+                    <TextBlock Text="Profile Note" />
+                    <TextBox x:Name="ProfileNoteTextBox"
+                             Height="70"
+                             AcceptsReturn="True"
+                             TextWrapping="Wrap"
+                             VerticalContentAlignment="Top" />
+
+                    <TextBlock Text="Request ID" />
+                    <TextBox x:Name="RequestIdTextBox" />
+
+                    <TextBlock Text="Printer Name" />
+                    <ComboBox x:Name="PrinterNameComboBox"
+                              IsEditable="True" />
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+
+        <TextBlock Grid.Row="2"
+                   x:Name="StatusTextBlock"
+                   Margin="0,12,0,4"
+                   Text="Ready."
+                   TextWrapping="Wrap" />
+
+        <Grid Grid.Row="3"
+              HorizontalAlignment="Stretch"
+              VerticalAlignment="Stretch">
+            <StackPanel Grid.Row="3"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Left">
+                <Button Content="Start SmartformOcxPreview"
+                        Click="StartSmartform_Click" />
+                <Button Content="Kill all SmartformOcxPreview"
+                        Click="KillSmartform_Click" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="3"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right">
+
+                <TextBlock Text="PrintingType"
+                           VerticalAlignment="Center"/>
+                <Border Width="10"/>
+                <TextBox x:Name="PrintingTypeTextBox"
+                         VerticalAlignment="Center"
+                         HorizontalContentAlignment="Center"
+                         MinWidth="30"
+                         Text="1"/>
+                
+                <Border Width="10"/>
+                
+                <TextBlock Text="PageSelect"
+                           VerticalAlignment="Center"/>
+                <Border Width="10"/>
+                <TextBox x:Name="PageSelectTextBox"
+                         VerticalAlignment="Center"
+                         HorizontalContentAlignment="Center"
+                         MinWidth="30"
+                         Text="0"/>
+                
+                <Border Width="10"/>
+                
+                <Button Content="Print"
+                        Click="Print_Click" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

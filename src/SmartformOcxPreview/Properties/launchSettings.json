@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SmartformOcxPreview": {
+      "commandName": "Project",
+      "commandLineArgs": "D:\\Projects\\Asure\\afcs.tom-atm\\src\\AFCS.TOM.APP\\bin\\Debug\\net6.0-windows\\start.info"
+    }
+  }
+}

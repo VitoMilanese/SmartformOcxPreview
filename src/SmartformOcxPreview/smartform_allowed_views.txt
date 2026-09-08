@@ -1,0 +1,2 @@
+AFCS.TOM.UCUILib.Views.UCCustomerInfoView
+AFCS.TOM.UCUILib.Views.UCOcxLayoutTestView

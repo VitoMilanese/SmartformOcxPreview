@@ -1,0 +1,66 @@
+!R! UNIT I; PDIR 180; EXIT;
+!R! SFNT 'Incised901SWC-Black',10; EXIT;
+
+
+
+
+
+
+												%HOLDER_FIRST_NAME% %HOLDER_LAST_NAME% 
+
+												%HOLDER_ADDRESS%                                                                    
+												%HOLDER_ZIP_CODE% %HOLDER_TOWN% (%HOLDER_PROV%)
+!R! SFNT 'Incised901SWC-Black', 8; EXIT;	
+	
+	
+
+
+
+
+
+       
+	
+	
+																		Titolare
+																	Cognome: %HOLDER_LAST_NAME%
+																	Nome: %HOLDER_FIRST_NAME%
+																	Data di nascita: %HOLDER_BIRTH_DAY%
+																	Nome Azienda: %COMPANY_NAME%
+
+																		Profilo 1
+																	Tipo: %TARIFF_SHORT_NAME%
+																	Data di scadenza: %TSC_VALIDITY_END_DATE%
+																	Note: %PROFILE_NOTE%
+
+																		Tessera
+																	Data di emissione: %ISSUING_DATE%
+																	Data di scadenza: %TSC_VALIDITY_END_DATE%
+
+																	Richiesta N.: %RICHIESTA_ID%	
+	
+	
+		
+		
+
+
+	
+!R! SFNT 'Incised901SWC',10; EXIT;
+     Gentile Cliente,
+
+     Le inviamo la Sua Tessera Senza Contatti.
+     La validita' della Tessera e dei Profili e' indicata in questo allegato.
+
+     Lieti di averLa come nostro Cliente, cogliamo l'occasione per inviarLe i piu' cordiali saluti.
+
+
+
+
+     														Il Servizio Clienti
+
+
+
+!R! MAP 7.1, 1.5; PDIR 90; BARC 41, N, '%_LocalID%', .2, .4; PDIR 180; EXIT;
+!R! RES;
+
+
+
