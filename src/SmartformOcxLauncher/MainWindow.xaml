@@ -34,8 +34,21 @@
                     <TextBlock Text="Sale Device" />
                     <TextBox x:Name="SaleDeviceTextBox" />
 
-                    <TextBlock Text="Profile File Name" />
-                    <TextBox x:Name="ProfileFileNameTextBox" />
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <TextBlock Grid.Row="0"
+                                   Text="Profile File Name" />
+                        <TextBox Grid.Row="1"
+                                 x:Name="ProfileFileNameTextBox" />
+                    </Grid>
 
                     <TextBlock Text="Profile ID" />
                     <TextBox x:Name="ProfileIdTextBox" />
