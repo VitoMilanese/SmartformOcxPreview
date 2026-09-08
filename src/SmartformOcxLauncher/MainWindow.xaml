@@ -178,7 +178,17 @@
         <Grid Grid.Row="3"
               HorizontalAlignment="Stretch"
               VerticalAlignment="Stretch">
-            <StackPanel Grid.Row="3"
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Grid.Row="0"
+                        Grid.Column="0"
                         Orientation="Horizontal"
                         HorizontalAlignment="Left">
                 <Button Content="Start SmartformOcxPreview"
@@ -186,10 +196,29 @@
                 <Button Content="Kill all SmartformOcxPreview"
                         Click="KillSmartform_Click" />
             </StackPanel>
-
-            <StackPanel Grid.Row="3"
+            
+            <StackPanel Grid.Row="0"
+                        Grid.Column="1"
                         Orientation="Horizontal"
                         HorizontalAlignment="Right">
+                <TextBlock Text="Page"
+                           VerticalAlignment="Center"/>
+                <Border Width="10"/>
+                <TextBox x:Name="PageNumberTextBox"
+                         VerticalAlignment="Center"
+                         HorizontalContentAlignment="Center"
+                         MinWidth="30"
+                         Text="0"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1"
+                        Grid.Column="0"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Left">
+                <Button Content="Print"
+                        Click="Print_Click" />
+                
+                <Border Width="10"/>
 
                 <TextBlock Text="PrintingType"
                            VerticalAlignment="Center"/>
@@ -210,11 +239,12 @@
                          HorizontalContentAlignment="Center"
                          MinWidth="30"
                          Text="0"/>
+            </StackPanel>
 
-                <Border Width="10"/>
-
-                <Button Content="Print"
-                        Click="Print_Click" />
+            <StackPanel Grid.Row="1"
+                        Grid.Column="1"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right">
             </StackPanel>
         </Grid>
     </Grid>
