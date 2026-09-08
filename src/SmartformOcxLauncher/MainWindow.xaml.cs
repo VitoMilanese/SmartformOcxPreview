@@ -257,6 +257,20 @@ public partial class MainWindow : Window
         }
     }
 
+    private void Front_Click(object sender, RoutedEventArgs e)
+    {
+        StartSmartform_Click(sender, e);
+        PageNumberTextBox.Text = "0";
+        StartSmartform_Click(sender, e);
+    }
+
+    private void Retro_Click(object sender, RoutedEventArgs e)
+    {
+        StartSmartform_Click(sender, e);
+        PageNumberTextBox.Text = "1";
+        StartSmartform_Click(sender, e);
+    }
+
     private void KillSmartform_Click(object sender, RoutedEventArgs e)
     {
         try

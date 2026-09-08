@@ -245,6 +245,10 @@
                         Grid.Column="1"
                         Orientation="Horizontal"
                         HorizontalAlignment="Right">
+                <Button Content="front"
+                        Click="Front_Click" />
+                <Button Content="retro"
+                        Click="Retro_Click" />
             </StackPanel>
         </Grid>
     </Grid>
