@@ -21,153 +21,159 @@
                    FontWeight="SemiBold"
                    Margin="0,0,0,14" />
 
-        <ScrollViewer Grid.Row="1"
-                      VerticalScrollBarVisibility="Auto">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="24" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <StackPanel Grid.Column="0">
-                    <TextBlock Text="Sale Device" />
-                    <TextBox x:Name="SaleDeviceTextBox" />
-
+        <Border Grid.Row="1"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                BorderThickness="0 0 0 0.5"
+                BorderBrush="Black">
+                <ScrollViewer Grid.Row="1"
+                              VerticalScrollBarVisibility="Auto">
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-
-                        <TextBlock Grid.Row="0"
-                                   Text="Profile File Name" />
-                        <TextBox Grid.Row="1"
-                                 x:Name="ProfileFileNameTextBox" />
-                        <Button Grid.Row="1"
-                                Grid.Column="1"
-                                Width="34"
-                                Height="30"
-                                MinWidth="34"
-                                MinHeight="30"
-                                Margin="8,2,0,8"
-                                Padding="0"
-                                ToolTip="Browse profile files"
-                                Click="BrowseProfileFile_Click">
-                            <TextBlock FontFamily="Segoe MDL2 Assets"
-                                       Text="&#xE838;"
-                                       FontSize="16"
-                                       HorizontalAlignment="Center"
-                                       VerticalAlignment="Center" />
-                        </Button>
-                    </Grid>
-
-                    <TextBlock Text="Profile ID" />
-                    <TextBox x:Name="ProfileIdTextBox" />
-
-                    <TextBlock Text="Profile Short Name" />
-                    <TextBox x:Name="ProfileShortNameTextBox" />
-
-                    <TextBlock Text="Profile Long Name" />
-                    <TextBox x:Name="ProfileLongNameTextBox" />
-
-                    <TextBlock Text="User ID" />
-                    <TextBox x:Name="UserIdTextBox" />
-
-                    <TextBlock Text="Holder Name" />
-                    <TextBox x:Name="HolderNameTextBox" />
-
-                    <TextBlock Text="Holder Surname" />
-                    <TextBox x:Name="HolderSurnameTextBox" />
-
-                    <TextBlock Text="Photo" />
-                    <Grid Margin="0,2,0,8">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-                        <TextBox x:Name="PhotoTextBox" Margin="0" />
-                        <Button Grid.Column="1"
-                                Content="Browse..."
-                                MinWidth="90"
-                                MinHeight="30"
-                                Margin="8,0,0,0"
-                                Click="BrowsePhoto_Click" />
-                    </Grid>
-
-                    <TextBlock Text="Signature" />
-                    <Grid Margin="0,2,0,8">
-                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="24" />
                             <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
-                        <TextBox x:Name="SignatureTextBox" Margin="0" />
-                        <Button Grid.Column="1"
-                                Content="Browse..."
-                                MinWidth="90"
-                                MinHeight="30"
-                                Margin="8,0,0,0"
-                                Click="BrowseSignature_Click" />
+
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="Sale Device" />
+                            <TextBox x:Name="SaleDeviceTextBox" />
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Grid.Row="0"
+                                           Text="Profile File Name" />
+                                <TextBox Grid.Row="1"
+                                         x:Name="ProfileFileNameTextBox" />
+                                <Button Grid.Row="1"
+                                        Grid.Column="1"
+                                        Width="34"
+                                        Height="30"
+                                        MinWidth="34"
+                                        MinHeight="30"
+                                        Margin="8,2,0,8"
+                                        Padding="0"
+                                        ToolTip="Browse profile files"
+                                        Click="BrowseProfileFile_Click">
+                                    <TextBlock FontFamily="Segoe MDL2 Assets"
+                                               Text="&#xE838;"
+                                               FontSize="16"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center" />
+                                </Button>
+                            </Grid>
+
+                            <TextBlock Text="Profile ID" />
+                            <TextBox x:Name="ProfileIdTextBox" />
+
+                            <TextBlock Text="Profile Short Name" />
+                            <TextBox x:Name="ProfileShortNameTextBox" />
+
+                            <TextBlock Text="Profile Long Name" />
+                            <TextBox x:Name="ProfileLongNameTextBox" />
+
+                            <TextBlock Text="User ID" />
+                            <TextBox x:Name="UserIdTextBox" />
+
+                            <TextBlock Text="Holder Name" />
+                            <TextBox x:Name="HolderNameTextBox" />
+
+                            <TextBlock Text="Holder Surname" />
+                            <TextBox x:Name="HolderSurnameTextBox" />
+
+                            <TextBlock Text="Photo" />
+                            <Grid Margin="0,2,0,8">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="PhotoTextBox" Margin="0" />
+                                <Button Grid.Column="1"
+                                        Content="Browse..."
+                                        MinWidth="90"
+                                        MinHeight="30"
+                                        Margin="8,0,0,0"
+                                        Click="BrowsePhoto_Click" />
+                            </Grid>
+
+                            <TextBlock Text="Signature" />
+                            <Grid Margin="0,2,0,8">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="SignatureTextBox" Margin="0" />
+                                <Button Grid.Column="1"
+                                        Content="Browse..."
+                                        MinWidth="90"
+                                        MinHeight="30"
+                                        Margin="8,0,0,0"
+                                        Click="BrowseSignature_Click" />
+                            </Grid>
+
+                            <TextBlock Text="Birthday" />
+                            <DatePicker x:Name="BirthdayDatePicker" />
+
+                            <TextBlock Text="Issuing Date" />
+                            <DatePicker x:Name="IssuingDateDatePicker" />
+
+                            <TextBlock Text="TSC EVD" />
+                            <DatePicker x:Name="TscEvdDatePicker" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2">
+                            <TextBlock Text="Serial Number" />
+                            <TextBox x:Name="SerialNumberTextBox" />
+
+                            <TextBlock Text="Address" />
+                            <TextBox x:Name="AddressTextBox" />
+
+                            <TextBlock Text="ZIP" />
+                            <TextBox x:Name="ZipTextBox" />
+
+                            <TextBlock Text="Town" />
+                            <TextBox x:Name="TownTextBox" />
+
+                            <TextBlock Text="Province" />
+                            <TextBox x:Name="ProvinceTextBox" />
+
+                            <TextBlock Text="STR1" />
+                            <TextBox x:Name="Str1TextBox" />
+
+                            <TextBlock Text="STR2" />
+                            <TextBox x:Name="Str2TextBox" />
+
+                            <TextBlock Text="STR3" />
+                            <TextBox x:Name="Str3TextBox" />
+
+                            <TextBlock Text="STRING1" />
+                            <TextBox x:Name="String1TextBox" />
+
+                            <TextBlock Text="Profile Note" />
+                            <TextBox x:Name="ProfileNoteTextBox"
+                                     Height="70"
+                                     AcceptsReturn="True"
+                                     TextWrapping="Wrap"
+                                     VerticalContentAlignment="Top" />
+
+                            <TextBlock Text="Request ID" />
+                            <TextBox x:Name="RequestIdTextBox" />
+
+                            <TextBlock Text="Printer Name" />
+                            <ComboBox x:Name="PrinterNameComboBox"
+                                      IsEditable="True" />
+                        </StackPanel>
                     </Grid>
-
-                    <TextBlock Text="Birthday" />
-                    <DatePicker x:Name="BirthdayDatePicker" />
-
-                    <TextBlock Text="Issuing Date" />
-                    <DatePicker x:Name="IssuingDateDatePicker" />
-
-                    <TextBlock Text="TSC EVD" />
-                    <DatePicker x:Name="TscEvdDatePicker" />
-                </StackPanel>
-
-                <StackPanel Grid.Column="2">
-                    <TextBlock Text="Serial Number" />
-                    <TextBox x:Name="SerialNumberTextBox" />
-
-                    <TextBlock Text="Address" />
-                    <TextBox x:Name="AddressTextBox" />
-
-                    <TextBlock Text="ZIP" />
-                    <TextBox x:Name="ZipTextBox" />
-
-                    <TextBlock Text="Town" />
-                    <TextBox x:Name="TownTextBox" />
-
-                    <TextBlock Text="Province" />
-                    <TextBox x:Name="ProvinceTextBox" />
-
-                    <TextBlock Text="STR1" />
-                    <TextBox x:Name="Str1TextBox" />
-
-                    <TextBlock Text="STR2" />
-                    <TextBox x:Name="Str2TextBox" />
-
-                    <TextBlock Text="STR3" />
-                    <TextBox x:Name="Str3TextBox" />
-
-                    <TextBlock Text="STRING1" />
-                    <TextBox x:Name="String1TextBox" />
-
-                    <TextBlock Text="Profile Note" />
-                    <TextBox x:Name="ProfileNoteTextBox"
-                             Height="70"
-                             AcceptsReturn="True"
-                             TextWrapping="Wrap"
-                             VerticalContentAlignment="Top" />
-
-                    <TextBlock Text="Request ID" />
-                    <TextBox x:Name="RequestIdTextBox" />
-
-                    <TextBlock Text="Printer Name" />
-                    <ComboBox x:Name="PrinterNameComboBox"
-                              IsEditable="True" />
-                </StackPanel>
-            </Grid>
-        </ScrollViewer>
+                </ScrollViewer>
+        </Border>
 
         <TextBlock Grid.Row="2"
                    x:Name="StatusTextBlock"
