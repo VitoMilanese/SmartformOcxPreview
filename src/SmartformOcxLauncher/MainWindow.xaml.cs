@@ -97,6 +97,20 @@ public partial class MainWindow : Window
         }
     }
 
+    private void BrowseProfileFile_Click(object sender, RoutedEventArgs e)
+    {
+        var dialog = new ProfileFileDialog
+        {
+            Owner = this
+        };
+
+        if (dialog.ShowDialog() == true &&
+            !string.IsNullOrWhiteSpace(dialog.SelectedFileName))
+        {
+            ProfileFileNameTextBox.Text = dialog.SelectedFileName;
+        }
+    }
+
     private void BrowsePhoto_Click(object sender, RoutedEventArgs e)
     {
         string? path = SelectImageFile();
@@ -135,7 +149,7 @@ public partial class MainWindow : Window
     {
         try
         {
-            string executablePath = Path.Combine(
+            var executablePath = Path.Combine(
                 AppContext.BaseDirectory,
                 ExecutableName);
 

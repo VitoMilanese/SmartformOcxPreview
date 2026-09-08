@@ -43,11 +43,27 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
-                        
+
                         <TextBlock Grid.Row="0"
                                    Text="Profile File Name" />
                         <TextBox Grid.Row="1"
                                  x:Name="ProfileFileNameTextBox" />
+                        <Button Grid.Row="1"
+                                Grid.Column="1"
+                                Width="34"
+                                Height="30"
+                                MinWidth="34"
+                                MinHeight="30"
+                                Margin="8,2,0,8"
+                                Padding="0"
+                                ToolTip="Browse profile files"
+                                Click="BrowseProfileFile_Click">
+                            <TextBlock FontFamily="Segoe MDL2 Assets"
+                                       Text="&#xE838;"
+                                       FontSize="16"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center" />
+                        </Button>
                     </Grid>
 
                     <TextBlock Text="Profile ID" />
@@ -183,9 +199,9 @@
                          HorizontalContentAlignment="Center"
                          MinWidth="30"
                          Text="1"/>
-                
+
                 <Border Width="10"/>
-                
+
                 <TextBlock Text="PageSelect"
                            VerticalAlignment="Center"/>
                 <Border Width="10"/>
@@ -194,9 +210,9 @@
                          HorizontalContentAlignment="Center"
                          MinWidth="30"
                          Text="0"/>
-                
+
                 <Border Width="10"/>
-                
+
                 <Button Content="Print"
                         Click="Print_Click" />
             </StackPanel>

@@ -1,0 +1,17 @@
+name: Temporary verification
+
+on:
+  push:
+    branches:
+      - add-profile-file-browser
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 6.0.x
+      - name: Build solution
+        run: dotnet build src/SmartformOcxPreview.sln --configuration Release
