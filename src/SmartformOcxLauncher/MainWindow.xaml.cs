@@ -149,7 +149,7 @@ public partial class MainWindow : Window
     {
         try
         {
-            string executablePath = Path.Combine(
+            var executablePath = Path.Combine(
                 AppContext.BaseDirectory,
                 ExecutableName);
 
