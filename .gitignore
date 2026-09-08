@@ -8,6 +8,11 @@
 *.userosscache
 *.sln.docstates
 
+# Environment / local secrets
+*.env
+.env.*
+!.env.example
+
 # AEP MOD! Plugin support
 *aep_plugins.bat
 
@@ -29,7 +34,9 @@ x86/
 bld/
 [Bb]in/
 [Oo]bj/
+[Oo]ut/
 #[Ll]og/ # AEP MOD!
+[Ll]ogs/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -42,11 +49,15 @@ Generated\ Files/
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
+*.trx
 
 # NUnit
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Approval Tests result files
+*.received.*
 
 # Build Results of an ATL Project
 [Dd]ebugPS/
@@ -60,6 +71,7 @@ BenchmarkDotNet.Artifacts/
 project.lock.json
 project.fragment.lock.json
 artifacts/
+.artifacts/
 
 # StyleCop
 StyleCopReport.xml
@@ -86,6 +98,7 @@ StyleCopReport.xml
 *.tmp_proj
 *_wpftmp.csproj
 *.log
+*.tlog
 *.vspscc
 *.vssscc
 .builds
@@ -140,6 +153,11 @@ _TeamCity*
 .axoCover/*
 !.axoCover/settings.json
 
+# Coverlet is a cross-platform code coverage tool
+coverage*.json
+coverage*.xml
+coverage*.info
+
 # Visual Studio code coverage results
 *.coverage
 *.coveragexml
@@ -177,7 +195,7 @@ publish/
 *.azurePubxml
 # Note: Comment the next line if you want to checkin your web deploy settings,
 # but database connection strings (with potential passwords) will be unencrypted
-# *.pubxml # AEP MOD!
+*.pubxml
 *.publishproj
 
 # Microsoft Azure Web App publish settings. Comment the next line if you want to
@@ -333,6 +351,7 @@ ASALocalRun/
 
 # MSBuild Binary and Structured Log
 *.binlog
+MSBuild_Logs/
 
 # NVidia Nsight GPU debugger configuration file
 *.nvuser
@@ -342,6 +361,10 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+.vshistory/
+
+# Local History for Visual Studio Code
+.history/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
